@@ -1,7 +1,7 @@
 # Events
 
 
-The basic idea of this package (which will be embedded in the <a heref = "https://github.com/Planeshifter/liquid-screen">liquidScreen</a> package, is to make animations easy.
+The basic idea of this package (which will be embedded in the <a href = "https://github.com/Planeshifter/liquid-screen">liquidScreen</a> package, is to make animations easy.
 
 
 ```javascript
