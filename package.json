@@ -1,0 +1,32 @@
+{
+  "name": "looped-events",
+  "version": "0.0.1",
+  "description": "an animation library (based upon greensock and jquery)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phalanstere/loopedEvents.git"
+  },
+  "keywords": [
+    "greensock",
+    "animation",
+    "events"
+  ],
+    "dependencies": {
+    "gsap": "^1.18.0",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "browserify-css": "~0.7.1"
+  },
+  
+  "author": "phalanstere <burckhardt@ludicmedia.de> (https://github.com/Phalanstere)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Phalanstere/loopedEvents/issues"
+  },
+  "homepage": "https://github.com/Phalanstere/loopedEvents#readme"
+}
