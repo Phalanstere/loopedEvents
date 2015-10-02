@@ -38,7 +38,7 @@ Adding events is easy, a little bit like writing css code:
 	
 ``` 
 
-The important thing here is the **type** definition (which in this is **greensock**  - but it could be also **jquery**).
+The important thing here is the **type** definition (which in this case is **greensock**  - but it could be also **jquery**).
 
 The **div** parameter referes to the div you want to animate.
 
