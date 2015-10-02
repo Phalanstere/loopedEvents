@@ -38,7 +38,7 @@ Adding events is easy, a little bit like writing css code:
 	
 ``` 
 
-The important here is the **type** definition (which in this is **greensock**  - but it could be also **jquery**).
+The important thing here is the **type** definition (which in this is **greensock**  - but it could be also **jquery**).
 
 The **div** parameter referes to the div you want to animate.
 
@@ -53,6 +53,7 @@ Then you push the events to the array. Next thing you do is do create the animat
 							        loop: true,
         							events: events,
         							interval: 1000,	
+        							autostart: true,
 								});
 	
 ``` 
