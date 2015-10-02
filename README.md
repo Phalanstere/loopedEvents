@@ -65,6 +65,9 @@ Then you push the events to the array. Next thing you do is do create the animat
  
  From version 0.21 there is a preliminary visual editor embedded that allows you to store the results in the browser file system (via **bowserify-fs**).
  
+ <img src="http://burckhardt.ludicmedia.de/LoopedEvents/LoopedEventsBar.png">
+ 
+ 
  if you set the option **development** true, you have it at the bottom of your screen.
  
 
