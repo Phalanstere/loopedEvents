@@ -5,7 +5,7 @@ The basic idea of this package (which will be embedded in the <a href = "https:/
 
 
 ```javascript
-	npm install looped-event
+	npm install looped-events
 ```
 
 
@@ -16,7 +16,7 @@ First you require the library:
 	
 ``` 
 
-Then you define an empty events array:  
+Then you define an empty array of events:  
 
 
 ```javascript
@@ -58,4 +58,9 @@ Then you push the events to the array. Next thing you do is do create the animat
 ``` 
  
  The **loop** parameter says that this effect will be repeated eternally. 
+ 
+ 
+ From version 0.21 there is a preliminary visual editor embedded that allows you to store the results in the browser file system (via **bowserify-fs**).
+ 
+ if you set the option **development** true, you have it at the bottom of your screen.
  
