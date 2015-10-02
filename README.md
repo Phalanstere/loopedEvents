@@ -63,12 +63,54 @@ Then you push the events to the array. Next thing you do is do create the animat
  The **loop** parameter says that this effect will be repeated eternally. 
  
  
- From version 0.21 there is a preliminary visual editor embedded that allows you to store the results in the browser file system (via **bowserify-fs**).
+ ##Much easier
+ 
+ There is a much easier way to create and modify event data. 
+  
+ From version 0.21 onwards there is a preliminary visual editor embedded that allows you to store the results in the browser file system (via **bowserify-fs**).
  
  <img src="http://burckhardt.ludicmedia.de/LoopedEvents/LoopedEventsBar.png">
+  
+ You can see it if you start the index.html file in the node_modules folder.
+ But creating such an animator in your personal environment is easy too.
+   
+ You just have to set the **development** flag as true - and you have (as in the poster above) the editor it at the bottom of your screen.
+ So the constructor might look like this:
  
  
- if you set the option **development** true, you have it at the bottom of your screen.
+```javascript
+	
+	var animator = new loop.Animator({
+							        loop: true,
+        							events: events,
+        							interval: 1000,	
+        							autostart: false,
+        							development: true,
+								});
+	
+```  
  
+When you are working with the **editor**, you ma save you json files in the brwoser file system.
+This allows you to start your animator after a particular *.json file has been read in, like this:
 
-- icons: Muneer A. Safiah, Mateo Zlatar, Felipe Santana from Noun Project
+```javascript
+  fs.readFile('font.json', 'utf-8', function(err, data) {
+      var obj = JSON.parse(data);
+      var m = new loop.Animator(obj);
+      window.animator = m;
+  });
+  ```  
+  
+The idea behind this is that you may trigger a lot of animations during runtime - and that you may want to have a multitude of animator objects.
+   
+#License
+
+MIT 
+
+
+#Copyright
+
+Copyright © 2015. Phalanstere
+
+
+icons: thanks to Muneer A. Safiah, Mateo Zlatar, Felipe Santana from Noun Project
