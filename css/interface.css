@@ -29,10 +29,14 @@ height: 32px;
 position: relative;
 float: left;
 margin-left: 10px;
-margin-top: 2px;
+margin-top: 6px;
 height: 20px;
 width: 20px;
-background: red;
+font-size: 20px;
+background-image: url(../css/save.svg);
+background-size: 80%;
+opacity: 0.7;
+background-repeat: no-repeat;
 }
 
 .lptime
@@ -52,27 +56,59 @@ border:solid 2px black;
 
 #lpgreensock
 {
-background: yellow;
+  background-image: url(../css/event.svg);
+  background-size: 80%;
+  opacity: 0.7;
+  background-repeat: no-repeat;
 }
 
 #lpstart
 {
-background: darkcyan;
+background-image: url(../css/start.svg);
+background-size: 80%;
+opacity: 0.7;
+background-repeat: no-repeat;
+}
+
+#lpstart:hover
+{
+opacity: 1;
 }
 
 #lpstop
 {
-background: pink;
+  background-image: url(../css/pause.svg);
+  background-size: 80%;
+  opacity: 0.7;
+  background-repeat: no-repeat;
 }
+
+#lpstop:hover
+{
+opacity: 1;
+}
+
 
 #lprewind
 {
-background: blue;
+  background-image: url(../css/stop.svg);
+  background-size: 80%;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+#lprewind:hover
+{
+opacity: 1;
 }
 
 #lpinfo
 {
-background: black;
+  background-image: url(../css/info.svg);
+  background-size: 80%;
+  opacity: 0.7;
+  background-repeat: no-repeat;
 }
 
 #tracks
@@ -143,13 +179,31 @@ box-shadow: 0px 2px 8px rgb(32,32,32);
   background: white;
 }
 
+#lpcancel
+{
+  position: absolute;
+  left: 21%;
+  top: 85%;
+  height: 30px;
+  font-size: 22px;
+  width: 120px;
+  padding: 12px;
+  background: silver;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgb(32,32,32);
+}
+
+#lpcancel:hover
+{
+background: darkcyan;
+}
+
 
 #lpsubmit
 {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin:auto;
+  right: 21%;
   top: 85%;
   height: 30px;
   font-size: 22px;

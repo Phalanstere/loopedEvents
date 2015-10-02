@@ -64,3 +64,5 @@ Then you push the events to the array. Next thing you do is do create the animat
  
  if you set the option **development** true, you have it at the bottom of your screen.
  
+
+- icons: Muneer A. Safiah, Mateo Zlatar, Felipe Santana from Noun Project
