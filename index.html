@@ -12,7 +12,7 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		background: rgb(32,32,32);
+		z-index: 1;
 		}
 
 	    #Titling
@@ -26,15 +26,32 @@
 	    height: auto;
 	    }
 
+	    #Back
+	    {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgb(32,32,32);	    	
+	    }
+	    
+	    #Back img 
+	    {
+	    width: 100%;
+	    height: auto;	
+	    }
+
 	</style>
 
+   <link href='http://fonts.googleapis.com/css?family=Oswald|Inconsolata' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/codemirror.css">
 
    <script type="text/javascript" src= "bundle.js"></script>
    <link rel="stylesheet" type="text/css" href="css/interface.css">
 
-   <div id="Fenster">Mal sehen, was das wird
-   </div>
+   <div id="Fenster">This is a demo for LoopedEvents</div>
+   <div id="Back"><img src = "css/image.jpg"/></div>   
 
 
   </body>
