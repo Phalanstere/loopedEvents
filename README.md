@@ -5,11 +5,14 @@
 
 The basic idea of this package (which will be embedded in the <a href = "https://github.com/Planeshifter/liquid-screen">liquidScreen</a> package, is to make animations easy.
 
+##Installation
 
 ```javascript
 	npm install looped-events
 ```
 
+
+##Usage
 
 First you require the library:
 
@@ -63,7 +66,7 @@ Then you push the events to the array. Next thing you do is do create the animat
  The **loop** parameter says that this effect will be repeated eternally. 
  
  
- ##Much easier
+ ##Working with the editor
  
  There is a much easier way to create and modify event data. 
   
@@ -102,6 +105,28 @@ This allows you to start your animator after a particular *.json file has been r
   ```  
   
 The idea behind this is that you may trigger a lot of animations during runtime - and that you may want to have a multitude of animator objects.
+   
+
+##Format
+
+However, when your are working with the editor you have to be aware, that the internal representation in the <a href = "https://codemirror.net/">**CodeMirror**</a href> window 
+does not follow the javascript, but json notation. So have to write:
+
+```javascript
+"color": "red"
+  ```     
+instead of  
+ 
+```javascript
+color: "red"
+  ```    
+
+#Features
+
+The style properties you can manipulate with the library are endless. It allows almost everything, that you can do with the Greensock library.
+Therefore, it could make sense to have a list of templates that you may integrate easily. 
+
+   
    
 #License
 
