@@ -103,6 +103,45 @@ That's all you need to know about the player.
  therefore it will be invoked after half a second.
  If you do not care about the correct sequencing manually, there will be no grave conseqauences, besides that the result does not fit your expectations. 
  
+##Utilizing it in your project
+
+ It is quite probable that you want to us a multitude of animations.
+ Therefore it would be quite cumbersome to create all the events manually - one reason why the project has an embedded editor (see below).
+ 
+ A classical usecase would be to read in a json file and apply it to a given div, like this one:
+ 
+ ```javascript
+
+$.ajax({
+  url: "myAnimation.json",
+  cache: false,
+  dataType: "json",
+  success: function(data){
+    if ( typeof(data) === "object")
+        {
+        if (data.interval && data.loop)
+            {     
+            var m = new loop.Animator(data);
+            window.animator = m;
+            }
+        else alert("it seems this no valid LoopedEvents format"); 
+        }
+  },
+  error: function(e, xhr){
+    alert("PROBLEME ");
+  }
+});
+
+```
+
+This assumes that you have stored all the necessary information in a *.json file.
+
+Another technique to construct an object is to use the internal database - particularly useful when you work with the editor.
+There you just have to select the stored json file - and that's it.
+
+Naturally, you're able to copy your files to a clipboard - and thereby generate valid *json files, without having to ponder about cumbersome event definitions.   
+
+ 
  
 ##Working with the editor
  
@@ -163,8 +202,8 @@ color: "red"
 
 <img src="http://burckhardt.ludicmedia.de/LoopedEvents/Templates.png">
 
-One nice thing about using the editor, is that you store whole sequences as files, but but also indiviudal evens (or arrays of events) as **templates**.
-If you build up a library of resusable pattern, you will not only follow the concept of *design patterns* but will save a lot of your time.  
+One nice thing about using the editor is that you can store whole sequences as files, but but also indiviudal events (or arrays of events) as **templates**.
+If you build up a library of resusable patterns, you will not only follow the concept of *design patterns* but will save a lot of your time.  
 
 
 #Features
