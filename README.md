@@ -66,7 +66,32 @@ Then you push the events to the array. Next thing you do is do create the animat
  The **loop** parameter says that this effect will be repeated eternally. 
  
  
- ##Working with the editor
+ ## Using arrays of events
+ 
+ You can apply also a list of greensock events, like this,
+ 
+ ```javascript
+  var e = {
+        type: "greensockArray",
+        div: "Fenster",
+        time: 2500,
+        duration: 1500,
+        events: [
+                { duration: 0,    top: -20, color: "blue", letterSpacing: "-2", ease: "Bounce.easeIn"}, 
+                { duration: 500, top: 100, color: "orange", delay: 500}
+                ] 
+        };
+
+
+ events.push(e);
+ ``` 
+ 
+ It is quite important to understand how the sequence works. The basic concent here is not **duration** but **delay**. The second event has a delay of 500 ms, 
+ therefore it will be invoked after half a second.
+ If you do not care about the correct sequencing manually, there will be no grave conseqauences, besides that the result does not fit your expectations. 
+ 
+ 
+ ## Working with the editor
  
  There is a much easier way to create and modify event data. 
   
