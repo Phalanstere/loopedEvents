@@ -66,7 +66,7 @@ Then you push the events to the array. Next thing you do is do create the animat
  The **loop** parameter says that this effect will be repeated eternally. 
  
  
- ## Using arrays of events
+##Using arrays of events
  
  You can apply also a list of greensock events, like this,
  
@@ -91,7 +91,7 @@ Then you push the events to the array. Next thing you do is do create the animat
  If you do not care about the correct sequencing manually, there will be no grave conseqauences, besides that the result does not fit your expectations. 
  
  
- ## Working with the editor
+##Working with the editor
  
  There is a much easier way to create and modify event data. 
   
