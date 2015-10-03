@@ -43,13 +43,13 @@ Adding events is easy, a little bit like writing css code:
 	
 ``` 
 
-The important thing here is the **type** definition (which in this case is **greensock**  - but it could be also **jquery**).
+The important thing here is the **type** definition (which in this case is **greensock**  - but it could be also **greensochkArray** or **jquery**).
 
 The **div** parameter referes to the div you want to animate.
 
-**time** is the time when the effect shall take place, in ms, the **fontSize** obviously the css font-size (written in CamelStyle since the **-** token is not allowed in js
+**time** is the time when the effect shall take place (in ms), the **fontSize** obviously the css font-size (written in CamelStyle since the **-** token is not allowed in js.
 
-Then you push the events to the array. Next thing you do is do create the animation object, like this:
+Then you push the events to the array. Next: you create the animation object, like this:
 
 
 ```javascript
@@ -63,7 +63,20 @@ Then you push the events to the array. Next thing you do is do create the animat
 	
 ``` 
  
- The **loop** parameter says that this effect will be repeated eternally. 
+ The **loop** parameter says that the animation sequence will be repeated eternally.
+ If you set **autostart** as true, the sequence will start immediately.
+ 
+ If you want to start as a result of a click, you write:
+ 
+   
+```javascript
+	
+	animator.begin();
+	
+```  
+ 
+To pause it, use the **stop** function, to stop and set the start time to zero agaign, you use the **rewind** function.
+That's all you need to know about the player.  
  
  
 ##Using arrays of events
