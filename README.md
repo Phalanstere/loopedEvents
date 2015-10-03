@@ -146,6 +146,14 @@ instead of
 color: "red"
   ```    
 
+##Using Templates
+
+<img src="http://burckhardt.ludicmedia.de/LoopedEvents/Templates.png">
+
+One nice thing about using the editor, is that you store whole sequences as files, but but also indiviudal evens (or arrays of events) as **templates**.
+If you build up a library of resusable pattern, you will not only follow the concept of *design patterns* but will save a lot of your time.  
+
+
 #Features
 
 The style properties you can manipulate with the library are endless. It allows almost everything, that you can do with the Greensock library.
