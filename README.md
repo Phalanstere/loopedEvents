@@ -1,4 +1,4 @@
-# Events
+# LoopedEvents
 
 
 <img src="http://burckhardt.ludicmedia.de/LoopedEvents/LoopedEvents.png">
