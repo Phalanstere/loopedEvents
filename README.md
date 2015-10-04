@@ -75,13 +75,13 @@ Then you push the events to the array. Next: you create the animation object, li
 	
 ```  
  
-To pause it, use the **stop** function, to stop and set the start time to zero agaign, you use the **rewind** function.
+To pause it, use the **stop** function. To stop and set the start time to zero again, you use the **rewind** function.
 That's all you need to know about the player.  
  
  
 ##Using arrays of events
  
- You can apply also a list of greensock events, like this,
+ Besides single events you can apply also a list of greensock events, like this,
  
  ```javascript
   var e = {
@@ -105,10 +105,10 @@ That's all you need to know about the player.
  
 ##Utilizing it in your project
 
- It is quite probable that you want to us a multitude of animations.
+ It is quite probable that you want to use a multitude of animations.
  Therefore it would be quite cumbersome to create all the events manually - one reason why the project has an embedded editor (see below).
  
- A classical usecase would be to read in a json file and apply it to a given div, like this one:
+ A classical use-case would be to read in a json file and apply it to a given div, like this:
  
  ```javascript
 
@@ -128,18 +128,18 @@ $.ajax({
         }
   },
   error: function(e, xhr){
-    alert("PROBLEME ");
+    alert("PROBLEMS ");
   }
 });
 
 ```
 
-This assumes that you have stored all the necessary information in a *.json file.
+This assumes that you have stored all the necessary information in a \*.json file.
 
 Another technique to construct an object is to use the internal database - particularly useful when you work with the editor.
 There you just have to select the stored json file - and that's it.
 
-Naturally, you're able to copy your files to a clipboard - and thereby generate valid *json files, without having to ponder about cumbersome event definitions.   
+Naturally, you're able to copy your files to a clipboard - and thereby generate valid \*json files, without having to ponder about cumbersome event definitions.   
 
  
  
@@ -151,10 +151,10 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
  
  <img src="http://burckhardt.ludicmedia.de/LoopedEvents/LoopedEventsBar.png">
   
- You can see it if you start the index.html file in the node_modules folder.
+ You can see it if you start the **index.html** file in the node_modules folder.
  But creating such an animator in your personal environment is easy too.
    
- You just have to set the **development** flag as true - and you have (as in the poster above) the editor it at the bottom of your screen.
+ You just have to set the **development** flag as true - and you will see (as in the poster above) the editor at the bottom of your screen.
  So the constructor might look like this:
  
  
@@ -170,8 +170,8 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
 	
 ```  
  
-When you are working with the **editor**, you ma save you json files in the brwoser file system.
-This allows you to start your animator after a particular *.json file has been read in, like this:
+When you are working with the **editor**, you may save your json-files in the brwoser file system.
+This allows you to start your animator after a particular \*.json file has been read in, like this:
 
 ```javascript
   fs.readFile('font.json', 'utf-8', function(err, data) {
@@ -202,8 +202,9 @@ color: "red"
 
 <img src="http://burckhardt.ludicmedia.de/LoopedEvents/Templates.png">
 
-One nice thing about using the editor is that you can store whole sequences as files, but but also indiviudal events (or arrays of events) as **templates**.
-If you build up a library of resusable patterns, you will not only follow the concept of *design patterns* but will save a lot of your time.  
+One nice thing about the editor is that you can store complcated event sequences as files, thereby reducing complexity.
+On the other you gain some versatility because may store indiviudal events (or arrays of events) as **templates**.
+If you build up a library of resusable patterns, you will not only follow the concept of **design patterns** but will save a lot of your time.  
 
 
 #Features
