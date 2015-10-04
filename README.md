@@ -176,7 +176,7 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
 	
 ```  
  
- To make use of it you have to add to css files to your *.html
+ In ortder to make use of it you have to add two css files to your \*.html
 
 ```html
  	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
