@@ -244,6 +244,8 @@ The minimal **index.js** file would look like this:
 
   ```    
   
+ In the **minimal** folder you will find a complete framework that will allow you to set up a minimal project. 
+  
 
  
 When you are working with the **editor**, you may save your json-files in the browser file system (via the great <a href = "https://github.com/louischatriot/nedb">**nedb**</a> library.

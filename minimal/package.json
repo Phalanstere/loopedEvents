@@ -1,0 +1,27 @@
+{
+"name": "LoopedEventsMinimal",
+"description": "A minimal setup for looped events",
+"version": "0.0.30",
+"author": "Phalanstere",
+"license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Phalanstere/LoopedEvents/issues"
+  },
+  "dependencies": {
+    "looped-events":  "^0.0.30"
+
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoopedEvents/commonplace.git"
+  },
+  "scripts": {
+    "postinstall": "browserify -t browserify-css index.js > bundle.js"
+
+  },
+
+"devDependencies": {
+    "browserify-css": "~0.7.1"
+}
+}
