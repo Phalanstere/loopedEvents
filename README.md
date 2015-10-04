@@ -12,6 +12,7 @@ The basic idea of this package (which will be embedded in the <a href = "https:/
 ```
 
 
+
 ##Usage
 
 First you require the library:
@@ -20,6 +21,7 @@ First you require the library:
 	var loop = require('looped-events');
 	
 ``` 
+
 
 Then you define an empty array of events:  
 
@@ -173,6 +175,14 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
 								});
 	
 ```  
+ 
+ To make use of it you have to add to css files to your *.html
+
+```html
+ 	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
+	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
+```   
+ 
  
 When you are working with the **editor**, you may save your json-files in the browser file system (via the great <a href = "https://github.com/louischatriot/nedb">**nedb**</a> library.
 This allows you to start your animator after a particular \*.json file has been read in, like this:
