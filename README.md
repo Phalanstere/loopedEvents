@@ -201,10 +201,48 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
 
 	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
 	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
+
  
   </body>
 </html>
 ```   
+  
+The minimal **index.js** file would look like this:
+
+```javascript
+	var $               = require('jquery');
+	var loop            = require('looped-events');
+	
+	 $(document).ready(function(){
+        "use strict";
+
+      
+        var events = [];
+        
+        var e = {
+        type: "greensock",  
+        div: "Sample",     // this  preupposes that a Sample div is existent  
+        time: 1000,
+        duration: 2000,
+        background: "red",
+        }; 
+
+        events.push(e);
+        
+        
+        animator = new loop.Animator({
+                                loop: true,
+                                events: events,
+                                interval: 60, 
+                                autostart: true,
+                                development: true,
+                                templateFile: './node_modules/looped-events/templates/text_effects.tmp.json'
+                            });
+
+
+	});
+
+  ```    
   
 
  
