@@ -172,17 +172,41 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
         							interval: 1000,	
         							autostart: false,
         							development: true,
+        							templateFile: './node_modules/looped-events/templates/text_effects.tmp.json'
 								});
 	
 ```  
+
  
- In ortder to make use of it you have to add two css files to your \*.html
+ You see that there is a proerty called **templateFile**. 
+ It refers to a list of default templates that you can use right from the start, but you can replace it by your own template collection.  
+ 
+ In order to make use of the editor you have to add two css files to your \*.html
 
 ```html
  	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
 	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
 ```   
+   
+ A **minimal html file** with an embedded editor looks like this:
  
+ 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LoopedEvents Minimal</title>
+
+	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
+	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
+ 
+  </body>
+</html>
+```   
+  
+
  
 When you are working with the **editor**, you may save your json-files in the browser file system (via the great <a href = "https://github.com/louischatriot/nedb">**nedb**</a> library.
 This allows you to start your animator after a particular \*.json file has been read in, like this:
