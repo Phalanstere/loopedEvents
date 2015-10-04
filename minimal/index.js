@@ -1,5 +1,7 @@
     var $               = require('jquery');
     var loop            = require('looped-events');
+    var fs = require('browserify-fs');
+
 
      $(document).ready(function(){
         "use strict";
@@ -40,3 +42,18 @@
 
 
     });
+    
+
+
+
+    window.construct = function (file)
+    {
+    "use strict";
+    $("#loopInterface").remove();
+    
+    fs.readFile(file, 'utf-8', function(err, data) {
+          var obj = JSON.parse(data);
+          var m = new loop.Animator(obj);
+          window.animator = m;
+          });
+    }
