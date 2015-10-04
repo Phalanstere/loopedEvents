@@ -45,11 +45,13 @@ Adding events is easy, a little bit like writing css code:
 
 The important thing here is the **type** definition (which in this case is **greensock**  - but it could be also **greensochkArray** or **jquery**).
 
-The **div** parameter referes to the div you want to animate.
+The **div** parameter refers to the div you want to animate.
 
 **time** is the time when the effect shall take place (in ms), the **fontSize** obviously the css font-size (written in CamelStyle since the **-** token is not allowed in js.
 
-Then you push the events to the array. Next: you create the animation object, like this:
+Then you push the events to the array. 
+
+Next: you create the animation object, like this:
 
 
 ```javascript
@@ -63,10 +65,12 @@ Then you push the events to the array. Next: you create the animation object, li
 	
 ``` 
  
- The **loop** parameter says that the animation sequence will be repeated eternally.
+ The **loop** parameter says that the animation sequence will be repeated eternally. You amy want to set is as **false**, then the animation will stop and rewind to start again.
+ 
+ 
  If you set **autostart** as true, the sequence will start immediately.
  
- If you want to start as a result of a click, you write:
+ If you want to start as a result of a click (or another event), you write:
  
    
 ```javascript
@@ -81,7 +85,7 @@ That's all you need to know about the player.
  
 ##Using arrays of events
  
- Besides single events you can apply also a list of greensock events, like this,
+ Besides single events you can apply an array of greensock events, like this,
  
  ```javascript
   var e = {
@@ -99,7 +103,7 @@ That's all you need to know about the player.
  events.push(e);
  ``` 
  
- It is quite important to understand how the sequence works. The basic concent here is not **duration** but **delay**. The second event has a delay of 500 ms, 
+ It is quite important to understand how the sequence works. The basic concept here is not **duration** but **delay**. The second event has a delay of 500 ms, 
  therefore it will be invoked after half a second.
  If you do not care about the correct sequencing manually, there will be no grave conseqauences, besides that the result does not fit your expectations. 
  
@@ -137,7 +141,7 @@ $.ajax({
 This assumes that you have stored all the necessary information in a \*.json file.
 
 Another technique to construct an object is to use the internal database - particularly useful when you work with the editor.
-There you just have to select the stored json file - and that's it.
+There you just have to select the stored json file that appears in the select box in the middle of the toolbar - and that's it.
 
 Naturally, you're able to copy your files to a clipboard - and thereby generate valid \*json files, without having to ponder about cumbersome event definitions.   
 
@@ -170,7 +174,7 @@ Naturally, you're able to copy your files to a clipboard - and thereby generate 
 	
 ```  
  
-When you are working with the **editor**, you may save your json-files in the brwoser file system.
+When you are working with the **editor**, you may save your json-files in the browser file system (via the great <a href = "https://github.com/louischatriot/nedb">**nedb**</a> library.
 This allows you to start your animator after a particular \*.json file has been read in, like this:
 
 ```javascript
