@@ -1,6 +1,6 @@
 {
   "name": "looped-events",
-  "version": "0.0.29",
+  "version": "0.0.32",
   "description": "an animation library (based upon greensock and jquery)",
   "main": "lib/events.js",
   "scripts": {
