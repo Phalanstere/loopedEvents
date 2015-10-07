@@ -1,6 +1,6 @@
 {
   "name": "looped-events",
-  "version": "0.0.32",
+  "version": "0.0.34",
   "description": "an animation library (based upon greensock and jquery)",
   "main": "lib/events.js",
   "scripts": {
@@ -20,8 +20,10 @@
     "jquery": "^2.1.4",
     "browserify-fs":  "^1.0.0",
     "jquery-ui": "^1.10.5",
-     "q": "^1.4.1",
-    "nedb": "^1.2.1"
+    "q": "^1.4.1",
+    "nedb": "^1.2.1",
+    "randomized-colors": "^0.0.31"
+    
   },
   "devDependencies": {
     "browserify-css": "~0.7.1"
