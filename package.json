@@ -1,7 +1,7 @@
 {
   "name": "looped-events",
-  "version": "0.0.40",
-  "description": "an animation library (based upon greensock and jquery)",
+  "version": "0.0.43",
+  "description": "an animation library (based upon greensock, jquery and raphael)",
   "main": "lib/events.js",
   "scripts": {
     "test": "test.js"
@@ -22,6 +22,7 @@
     "jquery-ui": "^1.10.5",
     "q": "^1.4.1",
     "nedb": "^1.2.1",
+    "raphael": "^2.1.4",
     "randomized-colors": "^0.0.31"
     
   },
