@@ -37,7 +37,7 @@
                                 interval: 20, 
                                 autostart: true,
                                 development: true,
-                                templateFile: './node_modules/looped-events/templates/text_effects.tmp.json'
+                                templateFile: './node_modules/looped-events/templates/collected.tmp.json'
                             });
 
 
