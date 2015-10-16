@@ -119,10 +119,105 @@ position: absolute;
 left: 2%;
 top: 2%;
 height: 86%;
-width: 40%;
+width: 34%;
 background: white;
 z-index: 99;	
 box-shadow: inset 0px 2px 2px #888;
+}
+
+
+#template_section
+{
+position: absolute;
+left: 36.5%;
+top: 2%;
+height: 86%;
+width: 25%;
+background: white;
+z-index: 99;	
+box-shadow: inset 0px 2px 2px #888;
+}
+
+
+.template_element
+{
+position: relative;
+height: 20px;
+border-bottom:solid 1px darkgray;	
+font-family: "Inconsolata";
+padding-top: 2px;
+padding-left: 4px;
+}
+
+
+
+.template_element:hover
+{
+background: lightgreen; 
+cursor: pointer;	
+}
+
+.delete_template
+{
+float: right;
+margin-right: 4px;
+margin-top: 2px;	
+width: 16px;
+height: 16px;
+background-image: url(delete.svg);
+background-size: 100% 100%;
+opacity: 0.5;
+cursor: crosshair;
+}
+
+.delete_template:hover
+{
+opacity: 1;	
+}
+
+
+#editable_template_section
+{
+position: absolute;
+left: 62%;
+top: 2%;
+height: 86%;
+width: 36%;
+background: white;
+z-index: 99;	
+box-shadow: inset 0px 2px 2px #888;
+}
+
+
+#template_code_section
+{
+position: absolute;
+left: 0;
+top: 0;
+height: 90%;
+width: 100%;
+}
+
+
+#template_code_submit
+{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  height: 40px;
+  font-size: 22px;
+  width: 120px;
+  padding: 6px;
+  background: silver;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgb(32,32,32);
+  font-family: "Inconsolata";
+}
+
+#template_code_submit:hover
+{
+	background: darkcyan;	
 }
 
 
@@ -416,6 +511,7 @@ min-width: 800px;
 background: gainsboro;
 z-index: 100;
 box-shadow: 0px 2px 8px rgb(32,32,32);
+border:solid 3px black;
 }
 
 #lpinput
@@ -453,6 +549,7 @@ box-shadow: 0px 2px 8px rgb(32,32,32);
   background: silver;
   text-align: center;
   cursor: pointer;
+  font-family: "Inconsolata";
   box-shadow: 0px 2px 8px rgb(32,32,32);
 }
 
@@ -494,6 +591,7 @@ background: darkcyan;
   text-align: center;
   cursor: pointer;
   box-shadow: 0px 2px 8px rgb(32,32,32);
+  font-family: "Inconsolata";
 }
 
 
@@ -517,6 +615,7 @@ background: darkorange;
   text-align: center;
   cursor: pointer;
   box-shadow: 0px 2px 8px rgb(32,32,32);
+  font-family: "Inconsolata";
 }
 
 

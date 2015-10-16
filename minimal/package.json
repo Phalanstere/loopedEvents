@@ -1,7 +1,7 @@
 {
 "name": "LoopedEventsMinimal",
 "description": "A minimal setup for looped events",
-"version": "0.0.46",
+"version": "0.0.47",
 "author": "Phalanstere",
 "license": "MIT",
   "bugs": {
