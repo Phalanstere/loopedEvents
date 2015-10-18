@@ -578,6 +578,31 @@ background: darkcyan;
 }
 
 
+#lpsolo
+{
+  position: absolute;
+  left: -31px;
+  top: 0;
+  height: 28px;
+  width: 28px;
+  border:solid 1px black;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0.3;
+  cursor: pointer;
+  background-image: url(solo.svg);
+  background-size: 90% 90%;
+  background-repeat:no-repeat;
+  background-position: center 4px;
+
+}
+
+#lpsolo:hover
+{
+opacity: 1;
+}
+
+
+
 #lpsubmit
 {
   position: relative;
