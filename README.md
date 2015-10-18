@@ -5,6 +5,10 @@
 
 The basic idea of this package (which will be embedded in the <a href = "https://github.com/Planeshifter/liquid-screen">liquidScreen</a> package, is to make animations easy.
 
+
+##<a href="http://burckhardt.ludicmedia.de/LoopedEvents">Demo</a>##
+
+
 ##Installation
 
 ```javascript
