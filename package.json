@@ -1,6 +1,6 @@
 {
   "name": "looped-events",
-  "version": "0.0.52",
+  "version": "0.0.56",
   "description": "an animation library (based upon greensock, jquery and raphael)",
   "main": "lib/events.js",
   "scripts": {
@@ -23,7 +23,9 @@
     "q": "^1.4.1",
     "nedb": "^1.2.1",
     "raphael": "^2.1.4",
-    "randomized-colors": "^0.0.31"
+    "randomized-colors": "^0.0.31",
+    "extract-svg-path": "^2.1.0",
+    "parse-svg-path": "^0.1.1"
     
   },
   "devDependencies": {
