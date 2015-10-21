@@ -89,55 +89,69 @@ The minimal **index.js** file would look like this:
   
  In the **minimal** folder you will find a complete framework that will allow you to set up a minimal project. 
  
- 
-##Working with the editor
- 
- 
- <img src="http://burckhardt.ludicmedia.de/LoopedEvents/LoopedEventsBar.png">
-  
- You can see it if you start the **index.html** file in the node_modules folder.
- But creating such an animator in your personal environment is easy too.
-   
- You just have to set the **development** flag as true - and you will see (as in the poster above) the editor at the bottom of your screen.
- So the constructor might look like this:
- 
+
+##Creating the aniomator object
+
+You may have a multitude of animator objects - and there are varios ways of creating.
+So have a look at the parameters:
  
 ```javascript
-	
-	var animator = new loop.Animator({
-							        loop: true,
-        							events: events,
-        							interval: 1000,	
-        							autostart: false,
-        							development: true,
-        							templateFile: './node_modules/looped-events/templates/text_effects.tmp.json'
-								});
-	
+     var animator = new loop.Animator({
+                                loop: true,
+                                events: events,
+                                interval: 60, 
+                                autostart: true,
+                                development: true,
+                                fixed: false,
+                                templateFile: './node_modules/looped-events/templates/collected.tmp.json'
+                            });
 ```  
 
- 
- You see that there is a proerty called **templateFile**. 
- It refers to a list of default templates that you can use right from the start, but you can replace it by your own template collection.  
- 
- In order to make use of the editor you have to add two css files to your \*.html
+- the **loop** parameters sets if the animation shall be repeated till it's stopped. (If you want to start manually, you invoke: **animator.start()**, if you want to stop: 
+  **animator.pause()**. Calling **animator.rewind()** goes back to start. 
+- the **events** parameters takes an array of events. You might create this manually but usually you could just pass a json file. This will be explained later.
+- the **interval** parameter determines the ms after which the player loop is invoked again
+- **autostart** - set it to true of you want to start the animation immediately
+- **development** - when you set this as true you will see the ditor at the bottom of your brwoser window
+- **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill male it dynamic. Hovering over the bottom of the screen will make the editor appear.      
+- **templateFile** - The template file is crucial: Since you can use a lot of templates and don't have to worry about doing that manually. If you omit this field, the editor will use the internal database 
 
-```html
- 	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
-	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
-```   
-   
  
-  
+##Extending the templates
+
  
 When you are working with the **editor**, you may save your json-files in the browser file system (via the great <a href = "https://github.com/louischatriot/nedb">**nedb**</a> library.
+When you click on the **cube** icon, you can see all your templates. Copy paste them and store them as a *.json file.
+Now you can use your own templates.
+
+##Storing and loading events
+
+When you click on the **info** button of the eidtor, you can see all your events in json-format. Copy paste it and store the events in your own **myevents.json** file 
+The settings of your projects will also be encapsulated.
+
 This allows you to start your animator after a particular \*.json file has been read in, like this:
 
 ```javascript
-  fs.readFile('font.json', 'utf-8', function(err, data) {
-      var obj = JSON.parse(data);
-      var m = new loop.Animator(obj);
-      window.animator = m;
-  });
+       $.ajax({
+          url: "myevents.json",
+          cache: false,
+          dataType: "json",
+          success: function(data){
+            if ( typeof(data) === "object")
+                {
+                if (data.interval && data.loop)
+                    {
+                    var m = new loop.Animator(data);
+                    window.animator = m;
+                    }
+                else alert("it seems this is no valid LoopedEvents format");
+                }
+          },
+          error: function(e, xhr){
+            alert("PROBLEME ");
+          }
+        });
+
   ```  
   
 The idea behind this is that you may trigger a lot of animations during runtime - and that you may want to have a multitude of animator objects.
