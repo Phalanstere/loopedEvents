@@ -175,7 +175,7 @@ For development there is an easier way to store your animations.
 
 You just click on the **diskette** icon, give your animation a name and then it will be stored in the local database.
 
-It also possible to merge building blocks into a bigger animation. Say you have an **svg.json** animation and want to add it to your animation at 0'48'', you go to the console and write: 
+You may also merge building blocks into a bigger animation. Say you have an **svg.json** animation and want to add it to your animation at 0'48'', you go to the console and write: 
 
 ```javascript
 	loopedEvents.interface.merge_file("svg.json", 48000); 
