@@ -120,12 +120,12 @@ So have a look at the parameters:
 
 - the **loop** parameters sets if the animation shall be repeated till it's stopped. (If you want to start manually, you invoke: **animator.start()**, if you want to stop: 
   **animator.pause()**. Calling **animator.rewind()** goes back to start. 
-- the **events** parameters takes an array of events. You might create this manually but usually you could just pass a json file. This will be explained later.
+- the **events** parameters takes an array of events. You might create this manually but usually you would pass a json file. This will be explained later.
 - the **interval** parameter determines the ms after which the player loop is invoked again
 - **autostart** - set it to true if you want to start the animation immediately
-- **development** - when you set this as true you will see the ditor at the bottom of your brwoser window
-- **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill make it dynamic. Hovering over the bottom of the screen will make the editor appear.      
-- **templateFile** - The template file is crucial, since you can use a lot of templates and don't have to worry about doing that manually. If you omit this field, the editor will use the internal database. But if you do this right from the start it will be empty. 
+- **development** - when you set this as true you will see the editor at the bottom of your browser window
+- **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill make it dynamic. Hovering over the bottom of the screen will make the editor appear, leaving it will cause it to disappear      
+- **templateFile** - The template file is crucial, since you can use a lot of templates and don't have to worry about writing events manually. If you omit this field, the editor will use the internal database. But if you do this right from the start it will be empty. 
  
 
  
