@@ -8,7 +8,7 @@
     "url": "https://github.com/Phalanstere/LoopedEvents/issues"
   },
   "dependencies": {
-    "looped-events":  "^0.0.30"
+    "looped-events":  "^0.0.58"
 
   },
 
