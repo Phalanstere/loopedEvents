@@ -127,7 +127,9 @@ So have a look at the parameters:
 - **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill make it dynamic. Hovering over the bottom of the screen will make the editor appear, leaving it will cause it to disappear      
 - **templateFile** - The template file is crucial, since you can use a lot of templates and don't have to worry about writing events manually. If you omit this field, the editor will use the internal database. But if you do this right from the start it will be empty. 
  
+###Working with the ditor
 
+In the wiki you find a little explanation how to work with the <a href = "https://github.com/Phalanstere/loopedEvents/wiki/1.-Working-with-the-Editor">editor</a>
  
 ##Extending the templates
 
