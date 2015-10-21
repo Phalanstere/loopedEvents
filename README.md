@@ -111,10 +111,11 @@ So have a look at the parameters:
   **animator.pause()**. Calling **animator.rewind()** goes back to start. 
 - the **events** parameters takes an array of events. You might create this manually but usually you could just pass a json file. This will be explained later.
 - the **interval** parameter determines the ms after which the player loop is invoked again
-- **autostart** - set it to true of you want to start the animation immediately
+- **autostart** - set it to true if you want to start the animation immediately
 - **development** - when you set this as true you will see the ditor at the bottom of your brwoser window
-- **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill male it dynamic. Hovering over the bottom of the screen will make the editor appear.      
-- **templateFile** - The template file is crucial: Since you can use a lot of templates and don't have to worry about doing that manually. If you omit this field, the editor will use the internal database 
+- **fixed** - setting fixed as true will cause the editor to stick at the bottom, setting it to false whill make it dynamic. Hovering over the bottom of the screen will make the editor appear.      
+- **templateFile** - The template file is crucial, since you can use a lot of templates and don't have to worry about doing that manually. If you omit this field, the editor will use the internal database. But if you do this right from the start it will be empty. 
+ 
 
  
 ##Extending the templates
@@ -126,7 +127,7 @@ Now you can use your own templates.
 
 ##Storing and loading events
 
-When you click on the **info** button of the eidtor, you can see all your events in json-format. Copy paste it and store the events in your own **myevents.json** file 
+When you click on the **info** button of the eidtor, you can see all your events in json-format. Copy paste them and store them in your own **myevents.json** file (or whatever it is called) 
 The settings of your projects will also be encapsulated.
 
 This allows you to start your animator after a particular \*.json file has been read in, like this:
@@ -156,6 +157,19 @@ This allows you to start your animator after a particular \*.json file has been 
   
 The idea behind this is that you may trigger a lot of animations during runtime - and that you may want to have a multitude of animator objects.
    
+##Development
+
+However, this call just makes if you wnat to go into production. 
+For development there is an easier way to store your animations. You just click on the **diskette** icon, give your animation a name and then it will be stored in the local database.
+
+It also possible to merge building blocks into a bigger animation. Say you have an **svg.json** animation and want to add it to your animation at 0'48'', you go to the console and write: 
+
+```javascript
+	loopedEvents.interface.merge_file("svg.json", 48000); 
+  ```  
+
+**loopedEvents** is a windows.global
+
 
 ##Format
 
@@ -171,19 +185,15 @@ instead of
 color: "red"
   ```    
 
-##Using Templates
-
-<img src="http://burckhardt.ludicmedia.de/LoopedEvents/Templates.png">
-
-One nice thing about the editor is that you can store complcated event sequences as files, thereby reducing complexity.
-On the other you gain some versatility because may store indiviudal events (or arrays of events) as **templates**.
-If you build up a library of resusable patterns, you will not only follow the concept of **design patterns** but will save a lot of your time.  
-
 
 #Features
 
-The style properties you can manipulate with the library are endless. It allows almost everything, that you can do with the Greensock library.
-Therefore, it could make sense to have a list of templates that you may integrate easily. 
+The style properties you can manipulate with the library are endless. It allows almost everything, that you can do with the **Greensock** library.
+Much slowser, but also supported, the **JQUery** library. 
+Another library which is embedded is **Raphael**. 
+One very nice feature: There is a template that allows ** progressive \*.svg painting**   
+
+Since the power of loopedEvents depends upon the multitude of usable templates, it makes sense to extend the template system. 
 
    
    
