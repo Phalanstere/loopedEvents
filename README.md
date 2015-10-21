@@ -29,7 +29,7 @@ First you require the library:
  
 ##Utilizing it in your project
 
-If you want to use the **LoopedEvents** editor, the best starting would be the minimal files you find in the **minimal** folder. 
+If you want to use the **LoopedEvents** editor, the best starting point would be the minimal files you find in the **minimal** folder. 
  
  A **minimal html file** with an embedded editor looks like this:
  
@@ -90,9 +90,9 @@ The minimal **index.js** file would look like this:
  In the **minimal** folder you will find a complete framework that will allow you to set up a minimal project. 
  
 
-##Creating the aniomator object
+##Creating the animator object
 
-You may have a multitude of animator objects - and there are varios ways of creating.
+You may have a multitude of animator objects - and there are varios ways of creating them.
 So have a look at the parameters:
  
 ```javascript
@@ -159,8 +159,10 @@ The idea behind this is that you may trigger a lot of animations during runtime 
    
 ##Development
 
-However, this call just makes if you wnat to go into production. 
-For development there is an easier way to store your animations. You just click on the **diskette** icon, give your animation a name and then it will be stored in the local database.
+However, this way of invoking the animator objects just makes sense if you want to go into production. 
+For development there is an easier way to store your animations. 
+
+You just click on the **diskette** icon, give your animation a name and then it will be stored in the local database.
 
 It also possible to merge building blocks into a bigger animation. Say you have an **svg.json** animation and want to add it to your animation at 0'48'', you go to the console and write: 
 
@@ -173,8 +175,8 @@ It also possible to merge building blocks into a bigger animation. Say you have 
 
 ##Format
 
-However, when your are working with the editor you have to be aware, that the internal representation in the <a href = "https://codemirror.net/">**CodeMirror**</a href> window 
-does not follow the javascript, but json notation. So have to write:
+When your are working with the editor you have to be aware, that the internal representation in the <a href = "https://codemirror.net/">**CodeMirror**</a href> window 
+does not follow the javascript, but json notation. So all the properties have to be written in brackets:
 
 ```javascript
 "color": "red"
@@ -184,13 +186,16 @@ instead of
 ```javascript
 color: "red"
   ```    
+and you have to be careful with the trailing comma.
+
+If your syntax is not correct the editor simply will not store it.
 
 
 #Features
 
-The style properties you can manipulate with the library are endless. It allows almost everything, that you can do with the **Greensock** library.
-Much slowser, but also supported, the **JQUery** library. 
-Another library which is embedded is **Raphael**. 
+The style properties you can manipulate with the loopedEvents library are endless. It allows almost everything, that you can do with the **Greensock** library.
+Much slower, but also supported: the **JQUery** library. 
+Another cool library -which is embedded is **Raphael** (mainly for the treatment of svg graphics)  
 One very nice feature: There is a template that allows ** progressive \*.svg painting**   
 
 Since the power of loopedEvents depends upon the multitude of usable templates, it makes sense to extend the template system. 
