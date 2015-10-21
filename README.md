@@ -44,7 +44,7 @@ If you want to use the **LoopedEvents** editor, the best starting point would be
 
 	<link rel="stylesheet" href="node_modules/looped-events/css/interface.css">
 	<link rel="stylesheet" href="node_modules/looped-events/css/codemirror.css">
-
+	<script src="bundle.js"></script> 
  
   </body>
 </html>
@@ -89,6 +89,17 @@ The minimal **index.js** file would look like this:
   
  In the **minimal** folder you will find a complete framework that will allow you to set up a minimal project. 
  
+
+##Browserify 
+
+In order to use it, you have to browserify your project. The command that does it is:
+
+```javascript
+browserify -t browserify-css lib/index.js > bundle.js
+ 
+ // and for the minified version
+browserify -t lib/index.js | uglifyjs > bundle.min.js
+``` 
 
 ##Creating the animator object
 
